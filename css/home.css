@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: sans-serif;
+background: #fff;
+color: #333;
+line-height: 1.6;
+}
+/* Header */
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: rgba(0, 0, 0, 0.8);
+padding: 10px 20px;
+z-index: 1000;
+}
+header nav ul {
+list-style: none;
+display: flex;
+justify-content: flex-end;
+}
+header nav ul li {
+margin-left: 20px;
+}
+header nav ul li a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+}
+header nav ul li a:hover {
+color: #FF3F3F;
+}
+/* Sección Hero */
+.hero {
+height: 100vh;
+background: url('img/hero.jpg') no-repeat center center/cover;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0 20px;
+animation: fadeIn 2s ease-out;
+}
+.hero h1 {
+font-family: 'Bangers', cursive;
+font-size: 4rem;
+color: #FFEA00;
+text-shadow: 2px 2px 4px #000;
+margin-bottom: 20px;
+animation: slideUp 1.5s ease-out;
+}
+.hero p {
+font-size: 1.5rem;
+color: #FFFFFF;
+max-width: 800px;
+animation: slideUp 1.8s ease-out;
+}
+/* Sección de Álbumes */
+.albums {
+padding: 100px 20px;
+background: #000;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+}
+.album {
+overflow: hidden;
+cursor: pointer;
+transition: transform 0.5s;
+}
+.album img {
+width: 100%;
+display: block;
+transition: transform 0.5s;
+}
+.album:hover img {
+transform: scale(1.1);
+}
+/* Footer */
+footer {
+background: #111;
+padding: 20px;
+text-align: center;
+color: #fff;
+}
+footer .social-icons img {
+width: 30px;
+margin: 0 10px;
+transition: transform 0.3s;
+}
+footer .social-icons img:hover {
+transform: scale(1.2);
+}
+/* Animaciones */
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+@keyframes slideUp {
+from { transform: translateY(30px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+.hero h1 {
+    font-size: 3rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+}
