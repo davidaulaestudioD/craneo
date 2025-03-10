@@ -181,6 +181,69 @@
   /* ===================== */
   /* Responsividad */
   /* ===================== */
+
+  @media (max-width: 1024px) {
+    .biografia-text {
+        background: url('img/herobio.jpg') no-repeat center center/cover;
+        border-radius: 10px;
+        padding: 40px;
+    }
+    .biografia-image {
+        display: none;
+    }
+    main {
+        padding-top: 110px;
+    }
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px;
+        order: 2;
+      }
+      
+      /* El header se distribuye entre logo y menú hamburguesa */
+      header {
+        justify-content: space-between;
+        padding: 20px 20px;
+      }
+
+      .header-left {
+        position: static;  /* Eliminamos la posición absoluta en móvil */
+        order: 1;
+      }
+      
+      /* El menú de navegación se oculta por defecto y se muestra al activar el checkbox */
+      .header-nav {
+        position: absolute;
+        top: 100px; /* Ajusta según la altura del header */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+      }
+      
+      /* Muestra el menú cuando se active el checkbox (input oculto) */
+      #menu-toggle:checked + .hamburger + .header-nav {
+        display: flex;
+      }
+      
+      /* Aunque el input sigue oculto, se deja para el control del estado */
+      #menu-toggle {
+        display: none;
+      }
+      
+      /* Ajusta el menú para que sus elementos se muestren en columna */
+      .header-nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+  }
+  
   @media (max-width: 768px) {
     header {
       justify-content: space-between;
@@ -229,14 +292,11 @@
         margin-top: 27px;
     }
     
-    .biografia-content {
-      flex-direction: column;
-      gap: 20px;
-    }
     
     .biografia-text {
       font-size: 1rem;
-      padding: 10px;
+      padding: 30px;
+      border-radius: 10px;
     }
     
     /* En el carrusel, se mantienen dos imágenes por slide */

@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ===================== */
+/* Header (igual que en el resto del sitio) */
+/* ===================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 40px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  filter: brightness(0) invert(1);
+}
+
+.header-left {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header-left img {
+  height: 60px;
+  margin-right: 5px;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  font-family: 'Bangers', cursive;
+  gap: 40px;
+  font-size: 24px;
+}
+
+.header-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header-nav ul li a:hover {
+  color: #FF3F3F;
+}
+
+#menu-toggle,
+.hamburger {
+  display: none;
+}
+
+/* ===================== */
+/* Footer (igual que en el resto del sitio) */
+/* ===================== */
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .social-icons img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+  filter: brightness(0) invert(1);
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* ===================== */
+/* Main Content */
+/* ===================== */
+main {
+  padding-top: 80px; /* Para evitar que se solape con el header fijo */
+}
+
+/* ===================== */
+/* Sección de Detalle del Producto */
+/* ===================== */
+.producto-detalle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #333;
+  border-radius: 10px;
+  gap: 40px; /* Espacio entre columnas */
+  margin-bottom: 10px;
+}
+  
+
+/* Columna Izquierda: Imagen, Nombre y Descripción */
+.producto-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.producto-imagen {
+  width: 100%;
+  max-width: 400px;
+}
+
+.producto-imagen img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.producto-info h1 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.1em;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.producto-info p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Columna Derecha: Precio, Cantidad y Botón de Compra */
+.producto-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.compra-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.precio {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.compra-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.compra-form label {
+  font-size: 1.5rem;
+}
+
+.compra-form input[type="number"] {
+  width: 70px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+.compra-form button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  width: 150%;
+  background: #FF3F3F;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.compra-form button:hover {
+  background: #e63939;
+}
+
+/* ===================== */
+/* Responsividad */
+/* ===================== */
+@media (max-width: 1024px) {
+  main {
+      padding-top: 110px;
+  }
+  .hamburger {
+      display: block;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      padding: 5px;
+      order: 2;
+    }
+    
+    /* El header se distribuye entre logo y menú hamburguesa */
+    header {
+      justify-content: space-between;
+      padding: 20px 20px;
+    }
+
+    .header-left {
+      position: static;  /* Eliminamos la posición absoluta en móvil */
+      order: 1;
+    }
+    
+    /* El menú de navegación se oculta por defecto y se muestra al activar el checkbox */
+    .header-nav {
+      position: absolute;
+      top: 100px; /* Ajusta según la altura del header */
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+    
+    /* Muestra el menú cuando se active el checkbox (input oculto) */
+    #menu-toggle:checked + .hamburger + .header-nav {
+      display: flex;
+    }
+    
+    /* Aunque el input sigue oculto, se deja para el control del estado */
+    #menu-toggle {
+      display: none;
+    }
+    
+    /* Ajusta el menú para que sus elementos se muestren en columna */
+    .header-nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+  main {
+    padding-top: 110px;
+  }
+  .producto-detalle {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .producto-left,
+  .producto-right {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .producto-info h1 {
+    font-size: 2rem;
+  }
+  
+  .precio {
+    font-size: 2rem;
+  }
+  
+  .compra-form input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .compra-form button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Opcional: separar con margen vertical */
+  .producto-detalle {
+    gap: 20px;
+  }
+
+  header {
+    justify-content: space-between;
+}
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    order: 2;
+}
+.header-left {
+    position: static;
+    order: 1;
+}
+#menu-toggle {
+    display: none;
+}
+.header-nav {
+    order: 3;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+#menu-toggle:checked + .hamburger + .header-nav {
+    display: flex;
+}
+.header-nav ul {
+    flex-direction: column;
+    gap: 10px;
+}
+}

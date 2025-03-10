@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álbumes - Cráneo/Sloth Brite</title>
+  <link rel="stylesheet" href="css/albumnes.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="index.html"><img src="css/img/logocraneo.svg" alt="Logo"></a>
+      <a href="index.html"><img src="css/img/nombre.svg" alt="Nombre"></a>
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">Inició</a></li>
+        <li><a href="biografia.html">Biografía</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="albumnes.html">Álbumes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="albumes">
+      <h1>Discografía</h1>
+      <!-- Pestañas de álbumes -->
+      <div class="tabs">
+        <button class="tab-button active" data-tab="album1">Álbum 1</button>
+        <button class="tab-button" data-tab="album2">Álbum 2</button>
+        <button class="tab-button" data-tab="album3">Álbum 3</button>
+        <button class="tab-button" data-tab="album4">Álbum 4</button>
+      </div>
+
+      <!-- Contenido de cada álbum -->
+      <div class="tab-content active" id="album1">
+        <h2>Dalsy</h2>
+        <ul class="tracklist">
+          <li>
+            <span>01. Dalsy</span>
+            <audio id="audio1" src="css/audio/dalsy.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio1').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio1').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>02. Park</span>
+            <audio id="audio2" src="css/audio/park.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio2').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio2').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>03. Swifty</span>
+            <audio id="audio3" src="css/audio/swifty.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio3').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio3').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>04. Parler</span>
+            <audio id="audio4" src="css/audio/parler.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio4').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio4').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>05. 20 Mg</span>
+            <audio id="audio5" src="css/audio/20mg.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio5').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio5').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>06. Jarabe</span>
+            <audio id="audio6" src="css/audio/jarabe.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio6').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio6').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>07. Terbasmin</span>
+            <audio id="audio7" src="css/audio/terbasmin.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio7').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio7').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>08. Okay</span>
+            <audio id="audio8" src="css/audio/okay.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio8').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio8').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>09. Marte</span>
+            <audio id="audio9" src="css/audio/marte.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio9').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio9').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>10. 40 Mg</span>
+            <audio id="audio10" src="css/audio/40mg.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio10').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio10').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>11. Freeze</span>
+            <audio id="audio11" src="css/audio/freeze.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio11').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio11').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>12. Zumo</span>
+            <audio id="audio12" src="css/audio/zumo.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio12').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio12').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>13. 60 Mg</span>
+            <audio id="audio13" src="css/audio/60mg.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio13').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio13').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>14. Cristal</span>
+            <audio id="audio14" src="css/audio/cristal.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio14').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio14').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>15. Algensaurio</span>
+            <audio id="audio15" src="css/audio/algensaurio.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio15').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio15').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>16. 100 Mg</span>
+            <audio id="audio16" src="css/audio/100mg.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio16').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio16').pause()">⏸</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="album2">
+        <h2>Diablos y Bermudas</h2>
+        <ul class="tracklist">
+          <!-- Se repite la misma estructura para cada pista -->
+          <li>
+            <span>01. El Hechizo</span>
+            <audio id="audio17" src="css/audio/hechizo.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio17').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio17').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>02. Casino</span>
+            <audio id="audio18" src="css/audio/casina.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio18').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio18').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>03. Level Up</span>
+            <audio id="audio19" src="css/audio/level.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio19').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio19').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>04. Baby</span>
+            <audio id="audio20" src="css/audio/baby.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio20').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio20').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>05. King Size</span>
+            <audio id="audio21" src="css/audio/king.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio21').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio21').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>06. Altar</span>
+            <audio id="audio22" src="css/audio/altar.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio22').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio22').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>07. Piénsame</span>
+            <audio id="audio23" src="css/audio/piensame.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio23').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio23').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>08. Hey Bro!</span>
+            <audio id="audio24" src="css/audio/hey.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio24').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio24').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>09. Vampiros</span>
+            <audio id="audio25" src="css/audio/vampiros.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio25').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio25').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>10. Home</span>
+            <audio id="audio26" src="css/audio/home.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio26').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio26').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>11. Cumbia del Diablo</span>
+            <audio id="audio27" src="css/audio/cumbia.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio27').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio27').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>12. Westdrill</span>
+            <audio id="audio28" src="css/audio/westdrill.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio28').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio28').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>13. Serpientes</span>
+            <audio id="audio29" src="css/audio/serpientes.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio29').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio29').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>14. Hotline</span>
+            <audio id="audio30" src="css/audio/hotline.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio30').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio30').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>15. Point and Shoot</span>
+            <audio id="audio31" src="css/audio/point.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio31').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio31').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>16. Ring Ring!</span>
+            <audio id="audio32" src="css/audio/ring.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio32').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio32').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>17. Super Dope</span>
+            <audio id="audio33" src="css/audio/super.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio33').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio33').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>18. Modo Avión</span>
+            <audio id="audio34" src="css/audio/modo.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio34').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio34').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>19. Limbo</span>
+            <audio id="audio35" src="css/audio/limbo.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio35').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio35').pause()">⏸</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="album3">
+        <h2>Acid House</h2>
+        <ul class="tracklist">
+          <li>
+            <span>01. Intro</span>
+            <audio id="audio36" src="css/audio/intro.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio36').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio36').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>02. Colchón</span>
+            <audio id="audio37" src="css/audio/colchon.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio37').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio37').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>03. Techo</span>
+            <audio id="audio38" src="css/audio/techo.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio38').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio38').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>04. Hexagon</span>
+            <audio id="audio39" src="css/audio/hexagon.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio39').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio39').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>05. Muelle</span>
+            <audio id="audio40" src="css/audio/muelle.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio40').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio40').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>06. Luna</span>
+            <audio id="audio41" src="css/audio/luna.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio41').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio41').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>07. París</span>
+            <audio id="audio42" src="css/audio/paris.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio42').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio42').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>08. Ventana</span>
+            <audio id="audio43" src="css/audio/ventana.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio43').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio43').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>09. N64</span>
+            <audio id="audio44" src="css/audio/n64.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio44').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio44').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>10. Mirlo</span>
+            <audio id="audio45" src="css/audio/mirlo.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio45').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio45').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>11. Espuma</span>
+            <audio id="audio46" src="css/audio/espuma.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio46').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio46').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>12. Fuera</span>
+            <audio id="audio47" src="css/audio/fuerza.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio47').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio47').pause()">⏸</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="album4">
+        <h2>HandMade</h2>
+        <ul class="tracklist">
+          <li>
+            <span>01. Born</span>
+            <audio id="audio48" src="css/audio/born.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio48').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio48').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>02. In a Tree</span>
+            <audio id="audio49" src="css/audio/tree.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio49').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio49').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>03. Flaco</span>
+            <audio id="audio50" src="css/audio/flaco.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio50').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio50').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>04. Clouds</span>
+            <audio id="audio51" src="css/audio/clouds.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio51').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio51').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>05. HandMade</span>
+            <audio id="audio52" src="css/audio/handmade.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio52').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio52').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>06. Particulas</span>
+            <audio id="audio53" src="css/audio/particulas.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio53').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio53').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>07. Ahumado</span>
+            <audio id="audio54" src="css/audio/ahumado.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio54').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio54').pause()">⏸</button>
+            </div>
+          </li>
+          <li>
+            <span>08. Fly Chill</span>
+            <audio id="audio55" src="css/audio/fly.mp3" hidden></audio>
+            <div class="controles">
+              <button class="play-button" onclick="document.getElementById('audio55').play()">▶</button>
+              <button class="stop-button" onclick="document.getElementById('audio55').pause()">⏸</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://open.spotify.com/intl-es/artist/05aVtfDzBvg9eVu9MAZPGD"><img src="css/img/spotify.svg" alt="Spotify"></a>
+      <a href="https://www.youtube.com/channel/UCFneGA2t-ikpyYsgsW2dhyA"><img src="css/img/youtube.svg" alt="Youtube"></a>
+      <a href="https://www.instagram.com/sloth_brite/"><img src="css/img/instagram.svg" alt="Instagram"></a>
+    </div>
+    <p>&copy; 2025 Cráneo/Sloth Brite. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
