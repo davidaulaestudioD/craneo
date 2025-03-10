@@ -11,11 +11,13 @@
 <body>
   <header>
     <div class="header-left">
-      <a href="index.html"><img src="css/img/logocraneo.svg" alt="Logo"></a>
+      <a href="index.html"><img src="css/img/logocraneo.svg" alt="Logo del Artista"></a>
       <a href="index.html"><img src="css/img/nombre.svg" alt="Nombre"></a>
     </div>
+
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="hamburger">&#9776;</label>
+
     <nav class="header-nav">
       <ul>
         <li><a href="index.html">Inició</a></li>
@@ -29,7 +31,6 @@
   <main>
     <section class="albumes">
       <h1>Discografía</h1>
-      <!-- Pestañas de álbumes -->
       <div class="tabs">
         <button class="tab-button active" data-tab="album1">Álbum 1</button>
         <button class="tab-button" data-tab="album2">Álbum 2</button>
@@ -37,7 +38,6 @@
         <button class="tab-button" data-tab="album4">Álbum 4</button>
       </div>
 
-      <!-- Contenido de cada álbum -->
       <div class="tab-content active" id="album1">
         <h2>Dalsy</h2>
         <ul class="tracklist">
@@ -175,7 +175,6 @@
       <div class="tab-content" id="album2">
         <h2>Diablos y Bermudas</h2>
         <ul class="tracklist">
-          <!-- Se repite la misma estructura para cada pista -->
           <li>
             <span>01. El Hechizo</span>
             <audio id="audio17" src="css/audio/hechizo.mp3" hidden></audio>
