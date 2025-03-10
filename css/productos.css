@@ -13,9 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* ===================== */
-/* Header (igual que en el resto del sitio) */
-/* ===================== */
+
 header {
   position: fixed;
   top: 0;
@@ -68,9 +66,6 @@ header img {
   display: none;
 }
 
-/* ===================== */
-/* Footer (igual que en el resto del sitio) */
-/* ===================== */
 footer {
   background: #111;
   padding: 20px;
@@ -88,16 +83,12 @@ footer .social-icons img:hover {
   transform: scale(1.2);
 }
 
-/* ===================== */
-/* Main Content */
-/* ===================== */
+
 main {
-  padding-top: 80px; /* Para evitar que se solape con el header fijo */
+  padding-top: 80px; 
 }
 
-/* ===================== */
-/* Sección de Detalle del Producto */
-/* ===================== */
+
 .producto-detalle {
   display: flex;
   flex-direction: row;
@@ -108,12 +99,10 @@ main {
   margin: 0 auto;
   background: #333;
   border-radius: 10px;
-  gap: 40px; /* Espacio entre columnas */
+  gap: 40px; 
   margin-bottom: 10px;
 }
   
-
-/* Columna Izquierda: Imagen, Nombre y Descripción */
 .producto-left {
   flex: 1;
   display: flex;
@@ -146,7 +135,6 @@ main {
   text-align: center;
 }
 
-/* Columna Derecha: Precio, Cantidad y Botón de Compra */
 .producto-right {
   flex: 1;
   display: flex;
@@ -206,9 +194,6 @@ main {
   background: #e63939;
 }
 
-/* ===================== */
-/* Responsividad */
-/* ===================== */
 @media (max-width: 1024px) {
   main {
       padding-top: 110px;
@@ -222,21 +207,21 @@ main {
       order: 2;
     }
     
-    /* El header se distribuye entre logo y menú hamburguesa */
+    
     header {
       justify-content: space-between;
       padding: 20px 20px;
     }
 
     .header-left {
-      position: static;  /* Eliminamos la posición absoluta en móvil */
+      position: static;  
       order: 1;
     }
     
-    /* El menú de navegación se oculta por defecto y se muestra al activar el checkbox */
+    
     .header-nav {
       position: absolute;
-      top: 100px; /* Ajusta según la altura del header */
+      top: 100px;
       left: 0;
       width: 100%;
       background: rgba(0, 0, 0, 0.9);
@@ -246,17 +231,17 @@ main {
       padding: 10px 0;
     }
     
-    /* Muestra el menú cuando se active el checkbox (input oculto) */
+   
     #menu-toggle:checked + .hamburger + .header-nav {
       display: flex;
     }
     
-    /* Aunque el input sigue oculto, se deja para el control del estado */
+   
     #menu-toggle {
       display: none;
     }
     
-    /* Ajusta el menú para que sus elementos se muestren en columna */
+
     .header-nav ul {
       flex-direction: column;
       gap: 10px;
@@ -296,7 +281,6 @@ main {
     font-size: 1.2rem;
   }
   
-  /* Opcional: separar con margen vertical */
   .producto-detalle {
     gap: 20px;
   }

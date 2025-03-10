@@ -1,138 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  background: #000;
-  color: #eee;
+    font-family: sans-serif;
+    line-height: 1.6;
+    background: #000;
+    color: #eee;
 }
 
-/* Header (igual que en home) */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.8);
-  padding: 20px 40px;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 20px 40px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 header img {
-  filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
 .header-left {
-  position: absolute;
-  left: 40px;
-  display: flex;
-  align-items: center;
+    position: absolute;
+    left: 40px;
+    display: flex;
+    align-items: center;
 }
 .header-left img {
-  height: 60px;
-  margin-right: 5px;
+    height: 60px;
+    margin-right: 5px;
 }
 .header-nav ul {
-  list-style: none;
-  display: flex;
-  font-family: 'Bangers', cursive;
-  gap: 40px;
-  font-size: 24px;
+    list-style: none;
+    display: flex;
+    font-family: 'Bangers', cursive;
+    gap: 40px;
+    font-size: 24px;
 }
 .header-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 .header-nav ul li a:hover {
-  color: #FF3F3F;
+    color: #FF3F3F;
 }
 #menu-toggle,
 .hamburger {
   display: none;
 }
 
-/* Footer (igual que en home) */
 footer {
-  background: #111;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
 }
 footer .social-icons img {
-  width: 30px;
-  margin: 0 10px;
-  transition: transform 0.3s;
-  filter: brightness(0) invert(1);
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+    filter: brightness(0) invert(1);
 }
 footer .social-icons img:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 main {
-  padding-top: 70px;
+    padding-top: 70px;
 }
 
-/* Sección Álbumes */
+
 .albumes {
-  text-align: center;
-  padding: 40px 20px;
-  /* Fondo con overlay para oscurecer la imagen y mejorar el contraste */
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("img/galeria3.jpg") no-repeat center center/cover;
-  color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("img/galeria3.jpg") no-repeat center center/cover;
+    color: #fff;
 }
 .albumes h1 {
     font-family: 'Bangers', cursive;
     font-size: 3rem;
     letter-spacing: 0.1em;
     margin-bottom: 30px;
-    color: #FF3F3F;              /* Color más vibrante */
-    border: 3px solid #FF3F3F;   /* Borde del mismo color */
-    display: inline-block;       /* Para que el borde se ajuste al tamaño del texto */
-    padding: 10px 20px;          /* Espaciado interno para mejorar la legibilidad */
-    background-color: rgba(0,0,0,0.7); /* Fondo semitransparente para mayor contraste */
+    color: #FF3F3F;             
+    border: 3px solid #FF3F3F;  
+    display: inline-block;       
+    padding: 10px 20px;         
+    background-color: rgba(0,0,0,0.7); 
   }
 
-/* Pestañas */
+
 .tabs {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 .tab-button {
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 12px 25px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: background 0.3s, transform 0.3s;
-  border-radius: 8px;
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 8px;
 }
 .tab-button:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 .tab-button.active {
-  background: #FF3F3F;
+    background: #FF3F3F;
 }
 
-/* Contenido de los álbumes */
+
 .tab-content {
-  display: none;
-  background: rgba(0, 0, 0, 0.65);
-  padding: 20px 30px;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  text-align: left;
+    display: none;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: left;
 }
 .tab-content.active {
   display: block;
@@ -144,34 +142,34 @@ main {
   letter-spacing: 0.1em;
 }
 
-/* Tracklist */
+
 .tracklist {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 .tracklist li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #222;
-  padding: 12px 15px;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .tracklist li:hover {
-  transform: translateX(8px);
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    transform: translateX(8px);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
 .tracklist li.playing {
-    background: #444; /* Un gris más claro que el fondo original #222 */
+    background: #444;
   }
 .tracklist li span {
   font-size: 1.1rem;
 }
 
-/* Controles de audio */
+
 .controles {
   display: flex;
   gap: 10px;
@@ -204,21 +202,21 @@ main {
         order: 2;
       }
       
-      /* El header se distribuye entre logo y menú hamburguesa */
+      
       header {
         justify-content: space-between;
         padding: 20px 20px;
       }
   
       .header-left {
-        position: static;  /* Eliminamos la posición absoluta en móvil */
+        position: static;  
         order: 1;
       }
       
-      /* El menú de navegación se oculta por defecto y se muestra al activar el checkbox */
+      
       .header-nav {
         position: absolute;
-        top: 100px; /* Ajusta según la altura del header */
+        top: 100px; 
         left: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
@@ -228,17 +226,16 @@ main {
         padding: 10px 0;
       }
       
-      /* Muestra el menú cuando se active el checkbox (input oculto) */
+      
       #menu-toggle:checked + .hamburger + .header-nav {
         display: flex;
       }
       
-      /* Aunque el input sigue oculto, se deja para el control del estado */
+     
       #menu-toggle {
         display: none;
       }
       
-      /* Ajusta el menú para que sus elementos se muestren en columna */
       .header-nav ul {
         flex-direction: column;
         gap: 10px;
